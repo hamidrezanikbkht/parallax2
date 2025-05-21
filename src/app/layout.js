@@ -1,5 +1,23 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import ScrollPlayAudio from "./component/ScrollPlayAudio/ScrollPlayAudio";
+
+const iranSans = localFont({
+  src: "../../assets/font/PlayfairDisplay-VariableFont_wght.ttf",
+  variable: "--font-iransans",
+  display: "swap",
+});
+const hamid = localFont({
+  src: "../../assets/font/JuliusSansOne-Regular.ttf",
+  variable: "--font-hamid",
+  display: "swap",
+});
+const reza = localFont({
+  src: "../../assets/font/Neonderthaw-Regular.ttf",
+  variable: "--font-reza",
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,10 +37,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${iranSans.variable} ${reza.variable} ${hamid.variable} antialiased`}>
         {children}
+                <ScrollPlayAudio />
+
       </body>
     </html>
   );

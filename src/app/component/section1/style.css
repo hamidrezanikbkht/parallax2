@@ -1,0 +1,31 @@
+@keyframes identifier {
+    100%{clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);transform: translateX(-10px);}
+    50%{clip-path: polygon(0 0, 100% 0, 100% 0, 0 98%);transform: translateX(10px);}
+    0%{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+}
+}
+.pas{
+    animation: identifier .8s forwards ;
+}
+@keyframes identif {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: translateY(-10px);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 98%);
+    transform: translateY(10px);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(0);
+  }
+}
+
+.yas {
+  animation: identif .8s forwards;
+  
+}
+.translate-z-20 {
+  transform: translateZ(20px);
+}
